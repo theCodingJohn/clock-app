@@ -1,0 +1,37 @@
+.clock {
+  justify-self: center;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  span {
+    font-size: 1rem;
+  }
+
+  .location,
+  .greeting {
+    letter-spacing: 0.25rem;
+    text-indent: 0.25rem;
+  }
+
+  .greeting {
+    position: relative;
+    font-weight: 400;
+    margin-left: 2.5rem;
+
+    .celestial-icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: -2.5rem;
+      display: block;
+    }
+  }
+
+  .text {
+    display: none;
+    @media (min-width: 768px) {
+      display: inline-block;
+    }
+  }
+}

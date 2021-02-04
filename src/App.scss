@@ -4,5 +4,8 @@
 @import "./styles/base";
 @import "./styles/mixins";
 
+// components
+@import "./components/styles/clock";
+
 // pages
 @import "./pages/styles/home";

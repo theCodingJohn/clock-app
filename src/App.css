@@ -38,6 +38,39 @@ h1 span {
   font-weight: 400;
 }
 
+body {
+  position: relative;
+  height: 100vh;
+  background: url(/src/assets/mobile/bg-image-daytime.jpg) no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: url(/src/assets/tablet/bg-image-daytime.jpg) no-repeat center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    background: url(/src/assets/desktop/bg-image-daytime.jpg) no-repeat center;
+    background-size: cover;
+  }
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 14, 14, 0.5);
+  z-index: -1;
+}
+
 .container {
   padding: 1.875rem;
 }
@@ -54,6 +87,48 @@ h1 span {
   }
 }
 
+.clock {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.clock span {
+  font-size: 1rem;
+}
+
+.clock .location,
+.clock .greeting {
+  letter-spacing: 0.25rem;
+  text-indent: 0.25rem;
+}
+
+.clock .greeting {
+  position: relative;
+  font-weight: 400;
+  margin-left: 2.5rem;
+}
+
+.clock .greeting .celestial-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: -2.5rem;
+  display: block;
+}
+
+.clock .text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .clock .text {
+    display: inline-block;
+  }
+}
+
 .home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,73 +139,7 @@ h1 span {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  position: relative;
   color: #fefefe;
-  background: url(/src/assets/mobile/bg-image-daytime.jpg) no-repeat center;
-  background-size: cover;
   height: 100vh;
-  z-index: -1;
-}
-
-.home::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(14, 14, 14, 0.5);
-  z-index: -1;
-}
-
-.home .clock {
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.home .clock span {
-  font-size: 1rem;
-}
-
-.home .location,
-.home .greeting {
-  letter-spacing: 0.25rem;
-  text-indent: 0.25rem;
-}
-
-.home .greeting {
-  position: relative;
-  font-weight: 400;
-  margin-left: 2.5rem;
-}
-
-.home .greeting .celestial-icon {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  left: -2.5rem;
-  display: block;
-}
-
-.home .text {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .home {
-    background: url(/src/assets/tablet/bg-image-daytime.jpg) no-repeat center;
-    background-size: cover;
-  }
-  .home .text {
-    display: inline-block;
-  }
-}
-
-@media (min-width: 992px) {
-  .home {
-    background: url(/src/assets/desktop/bg-image-daytime.jpg) no-repeat center;
-    background-size: cover;
-  }
 }
 /*# sourceMappingURL=App.css.map */
