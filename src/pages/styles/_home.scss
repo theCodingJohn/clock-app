@@ -1,5 +1,7 @@
 .home {
-  @include flexRowBottomLeft();
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: $white;
   height: 100vh;
 }
