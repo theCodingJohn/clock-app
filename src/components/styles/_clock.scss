@@ -1,5 +1,15 @@
+.clock-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .clock {
-  justify-self: center;
+  justify-self: flex-end;
   text-transform: uppercase;
   font-weight: 700;
 

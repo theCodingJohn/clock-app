@@ -1,7 +1,6 @@
 .quote {
   display: grid;
   width: 100%;
-  // max-width: 50vw;
   grid-template-columns: 1fr 1.6em;
   grid-column-gap: 0.625em;
   font-size: 13px;
@@ -17,5 +16,12 @@
 
   h3 {
     margin-top: 0.65em;
+  }
+
+  svg {
+    cursor: pointer;
+    &:focus {
+      outline: 2px dashed $white;
+    }
   }
 }
