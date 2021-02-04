@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,CAAC;AACD,CAAC,AAAA,OAAO;AACR,CAAC,AAAA,QAAQ,CAAC;EACR,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACvB",
+    "sources": [
+        "App.scss",
+        "styles/_variables.scss",
+        "styles/_resets.scss",
+        "styles/_typography.scss",
+        "styles/_base.scss",
+        "styles/_mixins.scss"
+    ],
+    "names": [],
+    "file": "App.css"
+}
