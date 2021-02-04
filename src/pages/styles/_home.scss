@@ -1,0 +1,78 @@
+.home {
+  @include flexRowBottomLeft();
+  position: relative;
+  color: $white;
+  background: url(/src/assets/mobile/bg-image-daytime.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  z-index: -1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $black, $alpha: 0.5);
+    z-index: -1;
+  }
+
+  .clock {
+    text-transform: uppercase;
+    font-weight: 700;
+
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  .location,
+  .greeting {
+    letter-spacing: 0.25rem;
+    text-indent: 0.25rem;
+  }
+
+  .greeting {
+    position: relative;
+    font-weight: 400;
+    margin-left: 2.5rem;
+
+    .celestial-icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: -2.5rem;
+      display: block;
+    }
+  }
+
+  .text {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .home {
+    background: url(/src/assets/tablet/bg-image-daytime.jpg) no-repeat center;
+    background-size: cover;
+
+    //   .location,
+    // .greeting {
+    //   letter-spacing: 0.25rem;
+    //   text-indent: 0.25rem;
+    // }
+
+    .text {
+      display: inline-block;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .home {
+    background: url(/src/assets/desktop/bg-image-daytime.jpg) no-repeat center;
+    background-size: cover;
+  }
+}
