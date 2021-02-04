@@ -1,10 +1,13 @@
 import React from "react";
 
+// pages
+import { Home } from "./pages/index"
+
 // style
 import "./App.css"
 
 const App = () => {
-  return <h1>Hello World!</h1>;
+  return <Home/>
 };
 
 export default App;
