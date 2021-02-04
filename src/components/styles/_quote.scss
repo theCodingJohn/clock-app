@@ -1,0 +1,21 @@
+.quote {
+  display: grid;
+  width: 100%;
+  // max-width: 50vw;
+  grid-template-columns: 1fr 1.6em;
+  grid-column-gap: 0.625em;
+  font-size: 13px;
+  @media (min-width: 768px) {
+    max-width: 75%;
+    font-size: 15px;
+  }
+  @media (min-width: 992px) {
+    max-width: calc(50% + 10em);
+    font-size: 16px;
+  }
+  line-height: 1.8em;
+
+  h3 {
+    margin-top: 0.65em;
+  }
+}
