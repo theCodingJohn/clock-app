@@ -1,0 +1,29 @@
+.more-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (min-width: 768px) {
+    align-self: flex-end;
+  }
+  margin-top: 3.25em;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: $gray;
+  background: $white;
+  width: 8.25em;
+  height: 3.25em;
+  border-radius: 50px;
+  padding: 0.3em 0.3em 0.3em 1.1em;
+
+  .arrow-icon {
+    width: 2.4em;
+    height: 2.4em;
+  }
+
+  &:focus {
+    outline: 2px dashed $white;
+  }
+}
