@@ -29,8 +29,14 @@ body {
 }
 
 h1 {
-  font-size: 6.25em;
+  font-size: 5em;
   font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 6.25em;
+  }
 }
 
 h1 span {
@@ -80,6 +86,12 @@ body::after {
   z-index: -1;
 }
 
+body .celestial-icon {
+  width: 30px;
+  height: 30px;
+  background: url(/src/assets/desktop/icon-sun.svg) no-repeat center;
+}
+
 body.night {
   background: url(/src/assets/mobile/bg-image-nighttime.jpg) no-repeat center fixed;
   background-size: cover;
@@ -97,6 +109,10 @@ body.night {
     background: url(/src/assets/desktop/bg-image-nighttime.jpg) no-repeat center;
     background-size: cover;
   }
+}
+
+body.night .celestial-icon {
+  background: url(/src/assets/desktop/icon-moon.svg) no-repeat center;
 }
 
 body.night .footer {

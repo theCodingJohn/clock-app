@@ -15,7 +15,10 @@ body {
 }
 
 h1 {
-  font-size: 6.25em;
+  font-size: 5em;
+  @media (min-width: 768px) {
+    font-size: 6.25em;
+  }
   font-weight: 700;
   span {
     font-size: 1rem;
