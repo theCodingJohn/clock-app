@@ -8,6 +8,10 @@ export const StatusProvider = (props) => {
 
   const [quote, setQuote] = useState(null)
 
+  const [timeData, setTimeData] = useState(null);
+
+  const [locationData, setLocationData] = useState(null);
+
   const fetchQuote = async () => {
     try {
       const response = await axios.get("https://api.quotable.io/random?tags=technology,famous-quotes");
@@ -19,7 +23,7 @@ export const StatusProvider = (props) => {
   }
 
   return (
-    <StatusContext.Provider value={{isComponentOpen, setComponentStatus, quote, setQuote, fetchQuote }}>
+    <StatusContext.Provider value={{isComponentOpen, setComponentStatus, quote, setQuote, fetchQuote, timeData, setTimeData, locationData, setLocationData}}>
       {props.children}
     </StatusContext.Provider>
   );

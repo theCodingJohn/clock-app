@@ -1,6 +1,5 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useContext} from 'react'
 import gsap from 'gsap'
-import axios from 'axios'
 
 // context
 import {StatusContext} from "../contexts/StatusContext"

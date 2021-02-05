@@ -3,6 +3,8 @@
 ## Api Used
 
 - For random quotes : https://github.com/lukePeavey/quotable
+- For user's location: https://freegeoip.app/
+- For user's local time: http://worldtimeapi.org/
 
 ## User Stories
 

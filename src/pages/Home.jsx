@@ -1,4 +1,5 @@
-import React, {useContext, useEffect} from 'react'
+import React, { useContext, useEffect } from 'react'
+import axios from 'axios'
 
 // components
 import {Clock} from "../components/index"
@@ -9,19 +10,35 @@ import { Footer } from "../components/index"
 import {StatusContext} from "../contexts/StatusContext"
 
 const Home = () => {
-  const { quote, fetchQuote } = useContext(StatusContext);
+  const { quote, fetchQuote, timeData, locationData,setTimeData, setLocationData } = useContext(StatusContext);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const timeDataResponse = await axios.get("http://worldtimeapi.org/api/ip");
+        setTimeData(timeDataResponse.data);
+        const locationDataResponse = await axios.get("https://freegeoip.app/json/");
+        setLocationData(locationDataResponse.data);
+      } catch (e) {
+        console.log(e)
+      }
+    }
+
+    fetchData()
+  }, [])
 
   useEffect(() => {
     fetchQuote();
-  }, [])
+    // eslint-disable-next-line
+  },[])
 
   return (
     <>
       <main className="home container">
         {!!quote ? <Quote /> : <p>Loading...</p>}
-        <Clock />
+        {!!timeData && !!locationData ? <Clock /> : <p>Loading...</p>}
       </main>
-      <Footer />
+      {!!timeData ? <Footer /> : <p>Loading...</p>}
     </>
   )
 }
