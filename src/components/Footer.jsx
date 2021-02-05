@@ -1,10 +1,6 @@
-import React, {useContext} from 'react'
-
-// context
-import {StatusContext} from '../contexts/StatusContext'
+import React from 'react'
 
 const Footer = () => {
-  const { isComponentOpen } = useContext(StatusContext);
 
   return (
     <footer className="footer container">
