@@ -1,6 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
+
+// context
+import {StatusContext} from '../contexts/StatusContext'
 
 const Footer = () => {
+  const { isComponentOpen } = useContext(StatusContext);
+
   return (
     <footer className="footer container">
       <div className="wrapper timezone-wrapper">
@@ -19,7 +24,7 @@ const Footer = () => {
         <p>week number</p>
         <h4>5</h4>
       </div>
-    </footer>
+    </footer> 
   )
 }
 

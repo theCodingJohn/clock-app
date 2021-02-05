@@ -1,5 +1,7 @@
 import React from "react";
 
+import {StatusProvider} from "./contexts/StatusContext"
+
 // pages
 import { Home } from "./pages/index"
 
@@ -7,7 +9,11 @@ import { Home } from "./pages/index"
 import "./App.css"
 
 const App = () => {
-  return <Home/>
+  return (
+    <StatusProvider>
+      <Home/>
+    </StatusProvider>
+  )
 };
 
 export default App;
