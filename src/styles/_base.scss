@@ -1,7 +1,16 @@
+* {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   position: relative;
-  height: 100%;
-  background: url(/src/assets/mobile/bg-image-daytime.jpg) no-repeat center;
+  height: 100vh;
+  background: url(/src/assets/mobile/bg-image-daytime.jpg) no-repeat center
+    fixed;
   background-size: cover;
   z-index: -1;
   @media (min-width: 768px) {
@@ -12,6 +21,7 @@ body {
     background: url(/src/assets/desktop/bg-image-daytime.jpg) no-repeat center;
     background-size: cover;
   }
+  overflow: hidden;
 
   &::after {
     content: "";

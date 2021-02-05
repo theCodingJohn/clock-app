@@ -19,8 +19,9 @@
   padding: 0.3em 0.3em 0.3em 1.1em;
 
   .arrow-icon {
-    width: 2.4em;
-    height: 2.4em;
+    transform: rotate(180deg);
+    width: 2.35em;
+    height: 2.45em;
   }
 
   &:focus {
