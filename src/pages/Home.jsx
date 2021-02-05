@@ -15,9 +15,9 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const timeDataResponse = await axios.get("http://worldtimeapi.org/api/ip");
+        const timeDataResponse = await axios.get("https://worldtimeapi.org/api/ip");
         setTimeData(timeDataResponse.data);
-        const locationDataResponse = await axios.get("http://freegeoip.app/json/");
+        const locationDataResponse = await axios.get("https://freegeoip.app/json/");
         setLocationData(locationDataResponse.data);
       } catch (e) {
         console.log(e)
@@ -25,6 +25,7 @@ const Home = () => {
     }
 
     fetchData()
+    // eslint-disable-next-line
   }, [])
 
   useEffect(() => {
