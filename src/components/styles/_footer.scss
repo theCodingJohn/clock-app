@@ -1,0 +1,56 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 10px;
+  @media (min-width: 768px) {
+    font-size: 12px;
+  }
+  @media (min-width: 992px) {
+    font-size: 14px;
+  }
+  letter-spacing: 0.1rem;
+  background: rgba($color: $white, $alpha: 0.75);
+  backdrop-filter: blur(40.7742px);
+  height: 16rem;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h4 {
+    font-size: 2.2em;
+  }
+
+  p {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .dayYear-wrapper {
+      order: 1;
+    }
+
+    .weekNumber-wrapper {
+      order: 1;
+    }
+
+    h4 {
+      margin-top: 0.3em;
+    }
+  }
+}

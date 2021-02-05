@@ -40,7 +40,7 @@ h1 span {
 
 body {
   position: relative;
-  height: 100vh;
+  height: 100%;
   background: url(/src/assets/mobile/bg-image-daytime.jpg) no-repeat center;
   background-size: cover;
   z-index: -1;
@@ -225,6 +225,92 @@ body::after {
 
 .more-button:focus {
   outline: 2px dashed #fefefe;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 10px;
+  letter-spacing: 0.1rem;
+  background: rgba(254, 254, 254, 0.75);
+  -webkit-backdrop-filter: blur(40.7742px);
+          backdrop-filter: blur(40.7742px);
+  height: 16rem;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer {
+    font-size: 14px;
+  }
+}
+
+.footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer h4 {
+  font-size: 2.2em;
+}
+
+.footer p {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .footer .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer .dayYear-wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .footer .weekNumber-wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .footer h4 {
+    margin-top: 0.3em;
+  }
 }
 
 .home {
