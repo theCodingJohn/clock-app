@@ -17,7 +17,7 @@ const Home = () => {
       try {
         const timeDataResponse = await axios.get("http://worldtimeapi.org/api/ip");
         setTimeData(timeDataResponse.data);
-        const locationDataResponse = await axios.get("https://freegeoip.app/json/");
+        const locationDataResponse = await axios.get("http://freegeoip.app/json/");
         setLocationData(locationDataResponse.data);
       } catch (e) {
         console.log(e)
