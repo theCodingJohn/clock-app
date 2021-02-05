@@ -33,6 +33,12 @@ body {
     background-color: rgba($color: $black, $alpha: 0.7);
     z-index: -1;
   }
+
+  .celestial-icon {
+    width: 30px;
+    height: 30px;
+    background: url(/src/assets/desktop/icon-sun.svg) no-repeat center;
+  }
 }
 
 body.night {
@@ -46,6 +52,10 @@ body.night {
   @media (min-width: 992px) {
     background: url(/src/assets/desktop/bg-image-nighttime.jpg) no-repeat center;
     background-size: cover;
+  }
+
+  .celestial-icon {
+    background: url(/src/assets/desktop/icon-moon.svg) no-repeat center;
   }
 
   .footer {
