@@ -1,5 +1,9 @@
 # Clock App
 
+## Api Used
+
+- For random quotes : https://github.com/lukePeavey/quotable
+
 ## User Stories
 
 Users should be able to:
