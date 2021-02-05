@@ -1,5 +1,7 @@
 # Clock App
 
+![site preview](./md_assets/clock-app.gif)
+
 ## Api Used
 
 - For random quotes : https://github.com/lukePeavey/quotable
