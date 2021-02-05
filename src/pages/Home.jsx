@@ -10,7 +10,7 @@ import { Footer } from "../components/index"
 import {StatusContext} from "../contexts/StatusContext"
 
 const Home = () => {
-  const { quote, fetchQuote, timeData, locationData,setTimeData, setLocationData } = useContext(StatusContext);
+  const { quote, fetchQuote, timeData, locationData, setTimeData, setLocationData } = useContext(StatusContext);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,7 +31,20 @@ const Home = () => {
   useEffect(() => {
     fetchQuote();
     // eslint-disable-next-line
-  },[])
+  }, [])
+
+  const userTime = new Date();
+
+  useEffect(() => {
+    const setTime = () => {
+      if (userTime.getHours() > 5 && userTime.getHours() < 18) {
+        document.body.className += "";
+      } 
+      document.body.className += " night";
+    }
+    setTime();
+    // eslint-disable-next-line
+  }, [])
 
   return (
     <>

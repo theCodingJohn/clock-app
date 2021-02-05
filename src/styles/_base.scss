@@ -12,7 +12,6 @@ body {
   background: url(/src/assets/mobile/bg-image-daytime.jpg) no-repeat center
     fixed;
   background-size: cover;
-  z-index: -1;
   @media (min-width: 768px) {
     background: url(/src/assets/tablet/bg-image-daytime.jpg) no-repeat center;
     background-size: cover;
@@ -21,6 +20,7 @@ body {
     background: url(/src/assets/desktop/bg-image-daytime.jpg) no-repeat center;
     background-size: cover;
   }
+  z-index: -1;
   overflow: hidden;
 
   &::after {
@@ -32,6 +32,25 @@ body {
     height: 100%;
     background-color: rgba($color: $black, $alpha: 0.7);
     z-index: -1;
+  }
+}
+
+body.night {
+  background: url(/src/assets/mobile/bg-image-nighttime.jpg) no-repeat center
+    fixed;
+  background-size: cover;
+  @media (min-width: 768px) {
+    background: url(/src/assets/tablet/bg-image-nighttime.jpg) no-repeat center;
+    background-size: cover;
+  }
+  @media (min-width: 992px) {
+    background: url(/src/assets/desktop/bg-image-nighttime.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .footer {
+    background: rgba($color: $black, $alpha: 0.75);
+    color: $white;
   }
 }
 

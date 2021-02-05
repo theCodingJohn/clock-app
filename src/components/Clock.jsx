@@ -10,6 +10,8 @@ const Clock = () => {
   const { timeData, locationData } = useContext(StatusContext); 
 
   const usersDateTime = new Date(timeData.datetime);
+  const userHour = usersDateTime.getHours().toString().padStart(2, "0");
+  const userMinute = usersDateTime.getMinutes().toString().padStart(2, "0");
 
   const greeting = (time) => {
     switch (time) {
@@ -30,7 +32,7 @@ const Clock = () => {
           {greeting(usersDateTime.getHours())}
           <span className="text">it's currently</span>
         </span>
-        <h1>{`${usersDateTime.getHours()}:${usersDateTime.getMinutes()} `}<span className="time-zone">{ timeData.abbreviation }</span></h1>
+        <h1>{`${userHour}:${userMinute} `}<span className="time-zone">{ timeData.abbreviation }</span></h1>
         <span className="location">{ `In ${locationData.city}, ${locationData.country_code}` }</span>
       </div>
       <MoreButton />
