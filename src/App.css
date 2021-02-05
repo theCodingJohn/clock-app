@@ -120,6 +120,8 @@ body::after {
 
 .clock {
   justify-self: flex-end;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   text-transform: uppercase;
   font-weight: 700;
 }

@@ -1,11 +1,25 @@
 import React, { createContext, useState } from "react";
+import axios from 'axios'
 
 export const StatusContext = createContext(null);
 
 export const StatusProvider = (props) => {
   const [isComponentOpen, setComponentStatus] = useState(false);
+
+  const [quote, setQuote] = useState(null)
+
+  const fetchQuote = async () => {
+    try {
+      const response = await axios.get("https://api.quotable.io/random?tags=technology,famous-quotes");
+      setQuote(response.data)
+      console.log(quote)
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
   return (
-    <StatusContext.Provider value={{isComponentOpen, setComponentStatus }}>
+    <StatusContext.Provider value={{isComponentOpen, setComponentStatus, quote, setQuote, fetchQuote }}>
       {props.children}
     </StatusContext.Provider>
   );
