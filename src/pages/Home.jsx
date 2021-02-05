@@ -15,10 +15,10 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const timeDataResponse = await axios.get("https://worldtimeapi.org/api/ip");
-        setTimeData(timeDataResponse.data);
         const locationDataResponse = await axios.get("https://freegeoip.app/json/");
         setLocationData(locationDataResponse.data);
+        const timeDataResponse = await axios.get(`https://worldtimeapi.org/api/ip/${locationDataResponse.data.ip}`);
+        setTimeData(timeDataResponse.data);
       } catch (e) {
         console.log(e)
       }
