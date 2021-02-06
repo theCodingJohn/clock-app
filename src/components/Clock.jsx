@@ -14,13 +14,12 @@ const Clock = () => {
   const userMinute = usersDateTime.getMinutes().toString().padStart(2, "0");
 
   const greeting = (time) => {
-    switch (time) {
-      case time > 5:
-        return "good morning,";
-      case time > 12 && time > 18:
-        return "good afternoon,";
-      default:
-        return "good evening,";
+    if (time > 5 && time < 12) {
+      return "good morning,";
+    } else if (time > 12 && time < 18) {
+      return "good afternoon,";
+    } else {
+      return "good evening,";
     }
   }
 
