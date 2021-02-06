@@ -12,6 +12,12 @@
     max-width: calc(50% + 10em);
     font-size: 16px;
   }
+  @media (min-width: 1440px) {
+    font-size: 21px;
+  }
+  @media (min-width: 1920px) {
+    font-size: 26px;
+  }
   line-height: 1.8em;
 
   h3 {

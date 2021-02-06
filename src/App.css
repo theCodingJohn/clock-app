@@ -24,6 +24,18 @@ html {
   }
 }
 
+@media (min-width: 1440px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 30px;
+  }
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
@@ -226,6 +238,18 @@ body.night .footer {
   }
 }
 
+@media (min-width: 1440px) {
+  .quote {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .quote {
+    font-size: 26px;
+  }
+}
+
 .quote h3 {
   margin-top: 0.65em;
 }
@@ -266,6 +290,18 @@ body.night .footer {
   .more-button {
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+}
+
+@media (min-width: 1440px) {
+  .more-button {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .more-button {
+    font-size: 24px;
   }
 }
 
@@ -310,6 +346,18 @@ body.night .footer {
 @media (min-width: 992px) {
   .footer {
     font-size: 14px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .footer {
+    font-size: 24px;
   }
 }
 
