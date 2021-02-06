@@ -17,7 +17,7 @@ const Home = () => {
       try {
         const locationDataResponse = await axios.get("https://freegeoip.app/json/");
         setLocationData(locationDataResponse.data);
-        const timeDataResponse = await axios.get(`https://worldtimeapi.org/api/ip/${locationDataResponse.data.ip}`);
+        const timeDataResponse = await axios.get(`https://worldtimeapi.org/api/ip/`);
         setTimeData(timeDataResponse.data);
       } catch (e) {
         console.log(e)
@@ -39,8 +39,9 @@ const Home = () => {
     const setTime = () => {
       if (userTime.getHours() > 5 && userTime.getHours() < 18) {
         document.body.className += "";
-      } 
-      document.body.className += " night";
+      } else {
+        document.body.className += " night";
+      }
     }
     setTime();
     // eslint-disable-next-line
