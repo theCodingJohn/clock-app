@@ -1,6 +1,10 @@
 # Clock App
 
-![site preview](./md_assets/clock-app.gif)
+Nighttime theme
+![site preview at night](./md_assets/clock-app-nighttime.gif)
+
+Daytime theme
+![site preview at day](./md_assets/clock-app-daytime.gif)
 
 ## Api Used
 
