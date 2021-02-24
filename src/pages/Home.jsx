@@ -5,6 +5,7 @@ import axios from 'axios'
 import {Clock} from "../components/index"
 import {Quote} from "../components/index"
 import { Footer } from "../components/index"
+import GithubButton from "../components/GithubButton/GithubButton"
 
 // context
 import {StatusContext} from "../contexts/StatusContext"
@@ -49,6 +50,7 @@ const Home = () => {
 
   return (
     <>
+      <GithubButton link="https://github.com/theCodingJohn/clock-app" />
       <main className="home container">
         {!!quote ? <Quote /> : <p>Loading...</p>}
         {!!timeData && !!locationData ? <Clock /> : <p>Loading...</p>}

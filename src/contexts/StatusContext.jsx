@@ -16,7 +16,6 @@ export const StatusProvider = (props) => {
     try {
       const response = await axios.get("https://api.quotable.io/random?tags=technology,famous-quotes");
       setQuote(response.data)
-      console.log(quote)
     } catch (e) {
       console.log(e)
     }
